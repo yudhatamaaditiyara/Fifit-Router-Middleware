@@ -53,7 +53,7 @@ class Middleware
 	}
 
 	/**
-	 * @param {Array|void} callbacks
+	 * @param {Array} callbacks
 	 * @returns {Middleware}
 	 */
 	uses(callbacks){
