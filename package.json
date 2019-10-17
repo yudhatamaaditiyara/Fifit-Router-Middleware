@@ -1,0 +1,13 @@
+{
+  "name": "fifit-router-middleware",
+  "description": "The Fifit Router Middleware",
+  "license": "Apache-2.0",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yudhatamaaditiyara/Fifit-Router-Middleware.git"
+  },
+  "dependencies": {
+    "fifit-util-middleware": "0.0.1"
+  }
+}
