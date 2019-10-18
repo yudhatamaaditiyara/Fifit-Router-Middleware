@@ -46,7 +46,7 @@ class Middleware
 	 */
 	use(callback){
 		if (typeof callback != 'function') {
-			throw new Error('The callback must be typeof function');
+			throw new Error('The callback must be type of function');
 		}
 		this._stack.push(callback);
 		return this;
