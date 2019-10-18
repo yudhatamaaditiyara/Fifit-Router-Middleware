@@ -42,6 +42,7 @@ class Middleware
 
 	/**
 	 * @param {function} callback
+	 * @throws {Error}
 	 * @returns {Middleware}
 	 */
 	use(callback){
