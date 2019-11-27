@@ -8,6 +8,7 @@
     "url": "git+https://github.com/yudhatamaaditiyara/Fifit-Router-Middleware.git"
   },
   "dependencies": {
-    "fifit-util-middleware": "0.0.6"
+    "ganiyem-error": "^1.5.2",
+    "fifit-util-middleware": "^0.0.6"
   }
 }

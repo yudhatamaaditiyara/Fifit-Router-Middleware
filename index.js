@@ -15,6 +15,7 @@
  */
 'use strict';
 
+const {IllegalArgumentError} = require('ganiyem-error');
 const middleware = require('fifit-util-middleware');
 
 /**
@@ -42,12 +43,12 @@ class Middleware
 
   /**
    * @param {function} callback
-   * @throws {Error}
+   * @throws {IllegalArgumentError}
    * @returns {Middleware}
    */
   use(callback){
     if (typeof callback != 'function') {
-      throw new Error('The callback must be type of function');
+      throw new IllegalArgumentError('The callback must be type of function');
     }
     this._stack.push(callback);
     return this;
