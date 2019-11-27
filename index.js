@@ -22,7 +22,7 @@ const middleware = require('fifit-util-middleware');
 class Middleware
 {
   /**
-   * @param {Array|void} callbacks
+   * @param {Array} [callbacks]
    */
   constructor(callbacks){
     this._stack = [];
