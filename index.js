@@ -21,46 +21,46 @@ const middleware = require('fifit-util-middleware');
  */
 class Middleware
 {
-	/**
-	 * @param {Array|void} callbacks
-	 */
-	constructor(callbacks){
-		this._stack = [];
-		this.handle = middleware(this._stack);
-		if (callbacks != null) {
-			this.uses(callbacks);
-		}
-	}
+  /**
+   * @param {Array|void} callbacks
+   */
+  constructor(callbacks){
+    this._stack = [];
+    this.handle = middleware(this._stack);
+    if (callbacks != null) {
+      this.uses(callbacks);
+    }
+  }
 
-	/**
-	 * @param {function} callback
-	 * @returns {boolean}
-	 */
-	has(callback){
-		return -1 < this._stack.indexOf(callback);
-	}
+  /**
+   * @param {function} callback
+   * @returns {boolean}
+   */
+  has(callback){
+    return -1 < this._stack.indexOf(callback);
+  }
 
-	/**
-	 * @param {function} callback
-	 * @throws {Error}
-	 * @returns {Middleware}
-	 */
-	use(callback){
-		if (typeof callback != 'function') {
-			throw new Error('The callback must be type of function');
-		}
-		this._stack.push(callback);
-		return this;
-	}
+  /**
+   * @param {function} callback
+   * @throws {Error}
+   * @returns {Middleware}
+   */
+  use(callback){
+    if (typeof callback != 'function') {
+      throw new Error('The callback must be type of function');
+    }
+    this._stack.push(callback);
+    return this;
+  }
 
-	/**
-	 * @param {Array} callbacks
-	 * @returns {Middleware}
-	 */
-	uses(callbacks){
-		callbacks.forEach(callback => this.use(callback));
-		return this;
-	}
+  /**
+   * @param {Array} callbacks
+   * @returns {Middleware}
+   */
+  uses(callbacks){
+    callbacks.forEach(callback => this.use(callback));
+    return this;
+  }
 }
 
 /**
